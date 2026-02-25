@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* Base styles */
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 1024px;
+  min-height: 100vh;
+}
+
+/* Dark theme (default) */
+.dark body {
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+/* Light theme */
+.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Scrollbar - dark */
+.dark ::-webkit-scrollbar { width: 8px; height: 8px; }
+.dark ::-webkit-scrollbar-track { background: #1e293b; }
+.dark ::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: #64748b; }
+
+/* Scrollbar - light */
+.light ::-webkit-scrollbar { width: 8px; height: 8px; }
+.light ::-webkit-scrollbar-track { background: #f1f5f9; }
+.light ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+.light ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Slider styling - dark */
+.dark input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.dark input[type="range"]::-webkit-slider-runnable-track {
+  background: #334155;
+  height: 6px;
+  border-radius: 3px;
+}
+.dark input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  background-color: #22d3ee;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+.dark input[type="range"]::-moz-range-track {
+  background: #334155;
+  height: 6px;
+  border-radius: 3px;
+}
+.dark input[type="range"]::-moz-range-thumb {
+  border: none;
+  background-color: #22d3ee;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+/* Slider styling - light */
+.light input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.light input[type="range"]::-webkit-slider-runnable-track {
+  background: #cbd5e1;
+  height: 6px;
+  border-radius: 3px;
+}
+.light input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -5px;
+  background-color: #0891b2;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+.light input[type="range"]::-moz-range-track {
+  background: #cbd5e1;
+  height: 6px;
+  border-radius: 3px;
+}
+.light input[type="range"]::-moz-range-thumb {
+  border: none;
+  background-color: #0891b2;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+
+/* KaTeX overrides */
+.dark .katex { color: #e2e8f0; }
+.light .katex { color: #1e293b; }
+.katex { font-size: 1.05em !important; }
